@@ -2,6 +2,9 @@ html {
   font-family: "Gotham", "helvetica", sans-serif;
 }
 
+body {
+  margin: 0;
+}
 
 footer {
   color: white;
@@ -13,35 +16,58 @@ footer {
   padding-top: 8px;
   padding-bottom: 8px;
   bottom: 0;
-
 }
 
 nav a{
-  display: block;
-  background-color: grey;
-  color: white;
+  display: inline-block;
+  color: #262626;
   font-size: 14px;
-  width: 100%;
   text-align: center;
   margin: 2px;
   padding-top: 6px;
   padding-bottom: 6px;
+  text-decoration: none;
 }
 
+.nav_container {
+  position: relative;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: solid 1px #f2f2f2;
+  box-shadow: 0 -4px 24px -2px #9c9c9c;
+}
 
+.home_get_started {
+  height: 80px;
+  background-color: black;
+}
+
+.get_started_bg {
+  height: 80px;
+  background-image: url(https://static.pexels.com/photos/4831/hands-coffee-smartphone-technology.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: opacity(50%);
+}
 
 .main_header h1{
   color: white;
-  background-color: #262626;
-  padding: 12px;
+  background-color: #161515;
+  padding: 18px;
   text-align: center;
   margin: 0;
+  font-size: 24px;
+}
+
+.home_nav li{
+  text-align: center;
 }
 
 .contacts {
   width: 80% ;
   margin: auto;
-
 }
 
 .contact_header {
@@ -71,6 +97,27 @@ nav a{
   margin-bottom: 6px;
 }
 
-.contact_list a {
 
-}
+
+
+/*Old Design*/
+
+/*body {
+  background-image: url(https://static.pexels.com/photos/4831/hands-coffee-smartphone-technology.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}*/
+
+/*nav a{
+  display: block;
+  background-color: grey;
+  color: white;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  margin: 2px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}*/

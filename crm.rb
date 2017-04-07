@@ -4,13 +4,8 @@
 require_relative 'contact'
 require 'sinatra'
 
-## Temporary fake data so that we always find contact with id 1.
-Contact.create('Betty', 'Maker', 'betty@bitmakerlabs.com', 'Developer')
-Contact.create('Brian', 'Du', 'brian@bitmakerlabs.com', 'Developer')
-Contact.create('Pritam', 'Das', 'pritam@bitmakerlabs.com', 'Developer')
-
 get '/' do
-  @crm_app_name = "Bitmaker CRM"
+  @crm_app_name = "Welcome!"
   erb :index
 end
 
@@ -27,10 +22,15 @@ post '/contacts' do
   redirect to('/contacts')
 end
 
-get '/contacts/:id' do
+put '/contacts/:id' do
   @contact = Contact.find(params[:id].to_i)
   if @contact
-    erb :show_contact
+    @contact.first_name = params[:first_name]
+    @contact.last_name = params[:last_name]
+    @contact.email = params[:email]
+    @contact.note = params[:note]
+
+    redirect to('/contacts')
   else
     raise Sinatra::NotFound
   end
@@ -40,6 +40,16 @@ get '/contacts/:id/edit' do
   @contact = Contact.find(params[:id].to_i)
   if @contact
     erb :edit_contact
+  else
+    raise Sinatra::NotFound
+  end
+end
+
+delete '/contacts/:id' do
+  @contact = Contact.find(params[:id].to_i)
+  if @contact
+    @contact.delete
+    redirect to('/contacts')
   else
     raise Sinatra::NotFound
   end
