@@ -4,6 +4,7 @@ html {
 
 body {
   margin: 0;
+  background-color: #f2f2f2;
 }
 
 footer {
@@ -16,6 +17,11 @@ footer {
   padding-top: 8px;
   padding-bottom: 8px;
   bottom: 0;
+
+}
+
+nav {
+  background-color: white;
 }
 
 nav a{
@@ -24,6 +30,8 @@ nav a{
   font-size: 14px;
   text-align: center;
   margin: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
   padding-top: 6px;
   padding-bottom: 6px;
   text-decoration: none;
@@ -35,21 +43,28 @@ nav a{
   padding-top: 12px;
   padding-bottom: 12px;
   border-bottom: solid 1px #f2f2f2;
-  box-shadow: 0 -4px 24px -2px #9c9c9c;
+  box-shadow: 0 0 24px -2px #9c9c9c;
 }
 
 .home_get_started {
-  height: 80px;
+  height: 120px;
   background-color: black;
+  text-align: center;
+}
+
+.home_get_started span{
+  position: relative;
+  font-size: 24px;
+  color: white;
+  top: 35%;
 }
 
 .get_started_bg {
-  height: 80px;
-  background-image: url(https://static.pexels.com/photos/4831/hands-coffee-smartphone-technology.jpg);
+  height: 120px;
+  background-image: url(/assets/banner_mobile.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: opacity(50%);
 }
 
 .main_header h1{
@@ -97,7 +112,51 @@ nav a{
   margin-bottom: 6px;
 }
 
+.index_container {
+  position: relative;
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  padding-top: 100px;
 
+}
+
+.index_container img {
+  position: relative;
+  display: block;
+  width: 70px;
+  margin: 0 auto;
+}
+
+.button_container {
+}
+
+.button {
+  display: block;
+  text-align: center;
+  width: 250px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #262626;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-decoration: none;
+  position: relative;
+  margin-top: 36px;
+
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+}
+
+.button:hover {
+  background-color: #605e60;
+}
 
 
 /*Old Design*/
