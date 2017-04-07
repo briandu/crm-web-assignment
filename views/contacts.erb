@@ -1,34 +1,30 @@
-<h1>All Contacts</h1>
+<div class="contacts_container">
 
-<ul>
+<h2>All Contacts</h1>
+
+<ul class="contacts">
 <% Contact.all.each do |contact| %>
-  <li><%= contact.first_name %> <%= contact.last_name %></li>
+  <li class="contact_list">
+    <div class="contact_info">
+      <%= contact.first_name %> <%= contact.last_name %>
+    </div>
+    <div class="modify">
+      <a href="#">Edit</a>|<a href="#">Delete</a>
+    </div>
+  </li>
 <% end %>
 </ul>
 
-<div class="contacts">
+</div>
+<!-- <div class="contacts"> -->
 
     <!-- <li><a href="/contacts">View all contacts</a></li>
     <li><a href="/contacts/new">Add a new contact</a></li> -->
     <!-- please complete me with links to other actions -->
-    <div class="contact_header">There are 5 contacts</div>
+    <!-- <div class="contact_header"><h3>There are <strong>5</strong> contacts</h3></div>
     <div class="contact_list">
       <p>Contact (example@example.com)</p>
       <a href="#">Edit</a>|<a href="#">Delete</a>
     </div>
-    <div class="contact_list">
-      <p>Contact (example@example.com)</p>
-      <a href="#">Edit</a>|<a href="#">Delete</a>
-    </div>
-    <div class="contact_list">
-      <p>Contact (example@example.com)</p>
-      <a href="#">Edit</a>|<a href="#">Delete</a>
-    </div>
-    <div class="contact_list">
-      <p>Contact (example@example.com)</p>
-      <a href="#">Edit</a>|<a href="#">Delete</a>
-    </div>
-    <div class="contact_list">
-      <p>Contact (example@example.com)</p>
-      <a href="#">Edit</a>|<a href="#">Delete</a>
-    </div>
+
+</div> -->

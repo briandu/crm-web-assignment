@@ -5,6 +5,7 @@
 #
 # If your implementation of the Contact class is 'right', then you should see that all tests pass!
 #
+
 class Contact
 
   attr_reader :id

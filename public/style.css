@@ -2,6 +2,19 @@ html {
   font-family: "Gotham", "helvetica", sans-serif;
 }
 
+h2 {
+  font-size: 24px;
+  color: #262626;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #262626;
+  text-transform: uppercase;
+}
+
 body {
   margin: 0;
   background-color: #f2f2f2;
@@ -13,7 +26,7 @@ footer {
   text-align: center;
   background: #262626;
   width: 100%;
-  position: absolute;
+  position: fixed;
   padding-top: 8px;
   padding-bottom: 8px;
   bottom: 0;
@@ -80,30 +93,46 @@ nav a{
   text-align: center;
 }
 
+.contacts_container {
+  max-width: 600px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 120px;
+}
+
 .contacts {
-  width: 80% ;
-  margin: auto;
+  color: #262626;
+  padding-left: 0;
 }
 
 .contact_header {
-  overflow: auto;
   color: white;
-  background-color: #f1459d;
-  padding-left: 12px;
-  padding-right: 12px;
+  /*padding-right: 12px;
   padding-top: 6px;
   padding-bottom: 6px;
-  margin-top: 12px;
+  margin-top: 12px;*/
 }
 
 .contact_list {
   display: block;
-  background-color: #a9e6f4;
+  background-color: white;
+  font-size: 16px;
   padding-left: 12px;
   padding-top: 12px;
   padding-bottom: 12px;
   margin-top: 8px;
-  margin-bottom: 4px;
+  border: solid 1px #f8f8f8;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px -2px #888787;
+}
+
+.contact_info {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+  padding-bottom: 12px;
 }
 
 .contact_list p {

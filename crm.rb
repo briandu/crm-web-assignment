@@ -4,6 +4,14 @@
 require_relative 'contact'
 require 'sinatra'
 
+# Fake contacts
+
+brian = Contact.create("Brian","Du","brian.bh.du@gmail.com","loves to code")
+jade = Contact.create("Jade","Tang","yuiii1012@gmail.com","hates to do chores")
+pritam = Contact.create("Pritam","Das","pritam.das@gmail.com","goes to Carribean Queen everyday")
+gordan = Contact.create("Gordon","Lee","gordon.lee@gmail.com","way too tall")
+mina = Contact.create("Mina","Mikhail","mina.mikhail@bitmaker.com","educates struggling students")
+
 get '/' do
   @crm_app_name = "Welcome!"
   erb :index
