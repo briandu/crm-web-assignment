@@ -2,6 +2,11 @@
 
 <h2>All Contacts</h1>
 
+<div class="contact_header">
+  <h3>There are # contacts</h3>
+</div>
+
+
 <ul class="contacts">
 <% Contact.all.each do |contact| %>
   <li class="contact_list">
@@ -9,7 +14,7 @@
       <%= contact.first_name %> <%= contact.last_name %>
     </div>
     <div class="modify">
-      <a href="#">Edit</a>|<a href="#">Delete</a>
+      <a href="#">Edit</a> | <a href="#">Delete</a>
     </div>
   </li>
 <% end %>

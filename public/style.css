@@ -119,9 +119,9 @@ nav a{
   display: block;
   background-color: white;
   font-size: 16px;
-  padding-left: 12px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-left: 14px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   margin-top: 8px;
   border: solid 1px #f8f8f8;
   margin-bottom: 12px;
@@ -139,6 +139,15 @@ nav a{
   padding-top: 0;
   margin-top: 0;
   margin-bottom: 6px;
+}
+
+.modify a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.modify a:hover {
+  color: #262626;
 }
 
 .index_container {
