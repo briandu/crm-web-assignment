@@ -37,6 +37,11 @@ class Contact
 
   end
 
+# This is the same method as below
+# def self.find(id)
+  #   @@contacts.find { |contact| contact.id == id }
+  # end
+
   def self.find(userid)
      @@contacts.each do |contact|
        if contact.id == userid
@@ -45,6 +50,7 @@ class Contact
      end
      false
   end
+
 
   def update(attribute, user_modify)
     case attribute
