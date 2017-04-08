@@ -3,7 +3,9 @@
 <h2>All Contacts</h1>
 
 <div class="contact_header">
-  <h3>There are # contacts</h3>
+  <h3>There are <span class="contactnumber">
+    <strong><%= Contact.all.count %></strong>
+  </span> contacts</h1>
 </div>
 
 
@@ -14,7 +16,7 @@
       <%= contact.first_name %> <%= contact.last_name %>
     </div>
     <div class="modify">
-      <a href="#">Edit</a> | <a href="#">Delete</a>
+      <a href="/contacts/<%= contact.id %>/edit">Edit</a> | <a href="/contacts/<=% contact.id %>/edit">Delete</a>
     </div>
   </li>
 <% end %>
