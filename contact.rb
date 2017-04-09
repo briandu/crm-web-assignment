@@ -6,6 +6,12 @@
 # If your implementation of the Contact class is 'right', then you should see that all tests pass!
 #
 
+gem 'activerecord', '=5.0.2'
+require 'active_record'
+require 'mini_record'
+
+ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: 'crm-web.sqlite3')
+
 class Contact
 
   attr_reader :id
