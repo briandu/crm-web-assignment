@@ -6,11 +6,11 @@ require 'sinatra'
 
 # Fake contacts
 
-brian = Contact.create("Brian","Du","brian.bh.du@gmail.com","loves to code")
-jade = Contact.create("Jade","Tang","yuiii1012@gmail.com","hates to do chores")
-pritam = Contact.create("Pritam","Das","pritam.das@gmail.com","goes to Carribean Queen everyday")
-gordan = Contact.create("Gordon","Lee","gordon.lee@gmail.com","way too tall")
-mina = Contact.create("Mina","Mikhail","mina.mikhail@bitmaker.com","educates struggling students")
+# brian = Contact.create("Brian","Du","brian.bh.du@gmail.com","loves to code")
+# jade = Contact.create("Jade","Tang","yuiii1012@gmail.com","hates to do chores")
+# pritam = Contact.create("Pritam","Das","pritam.das@gmail.com","goes to Carribean Queen everyday")
+# gordan = Contact.create("Gordon","Lee","gordon.lee@gmail.com","way too tall")
+# mina = Contact.create("Mina","Mikhail","mina.mikhail@bitmaker.com","educates struggling students")
 
 get '/' do
   @crm_app_name = "Welcome!"
@@ -26,7 +26,12 @@ get '/contacts/new' do
 end
 
 post '/contacts' do
-  Contact.create(params[:first_name], params[:last_name], params[:email], params[:note])
+  contact = Contact.create(
+    first_name: params[:first_name],
+    last_name:  params[:last_name],
+    email:      params[:email],
+    note:       params[:note]
+  )
   redirect to('/contacts')
 end
 
